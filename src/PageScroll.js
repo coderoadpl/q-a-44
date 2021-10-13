@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router';
 
-const scrollPositions = {
+export const scrollPositions = {
   first: 'first',
   second: 'second',
   third: 'third',
