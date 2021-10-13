@@ -14,13 +14,17 @@ const PageScroll = () => {
   React.useEffect(() => {
     const scrollId = scrollPositions[scrollPosition]
 
-    if(!scrollId) return
+    if (!scrollId) return
 
     const domElement = document.querySelector(`#${scrollId}`)
 
     const scrollHeight = domElement.offsetTop
-    
-    window.scrollTo(0, scrollHeight)
+
+    window.scrollTo({
+      top: scrollHeight,
+      left: 0,
+      behavior: 'smooth'
+    })
   }, [scrollPosition])
 
   return (
